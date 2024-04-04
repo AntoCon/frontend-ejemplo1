@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form action="#" method="post"> <!-- # para que vuelva a la misma pagina (se envia y recibe la misma pag)-->
+        <!--label etiqueta explicativa de input (que va en el input) -->
+        <label for="Nombre">Nombre</label>
+        <input type="text" required placeholder="Nombre Apellido"name="Nombre" id="Nombre">
+        <!--elegir el input correcto importante-->
+        <!--place holder = sombra explicativa-->
+        <!--required para que el campo sea obligatorio-->
+        <br>
+        <label for="Edad">Edad</label>
+        <input type="number" name="Edad" min="0" max="130" id="Edad">
+        <!--step para saltos especificos-->
+        <br>
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña">
+        <!-- creacion de boton para enviar formulario-->
+        <br>
+        <label for="correo">Correo electronico</label>
+        <input type="email" required name="correo" id="correo">
+        <br>
+        <!-- value sirve para dejar un valor por defecto-->
+        <label for="pais">Pais</label>
+        <select required name="pais" id="pais">
+            <!--para oblicar  que alguien seleccione algo-->
+            <option value="">[Seleccione un pais]</option>
+            <!--agregar grupo-->
+            <optgroup label="America">
+               <option value="1">Chile</option>
+            <option value="2">Peru</option>
+            <option value="3">Colombia</option> 
+                
+            </optgroup>
+            <optgroup label="Europa">
+            <option value="4">España</option>
+            <option value="5">Potugal</option>
+            <option value="6">Italia</option>
+            </optgroup>
+            <!--value =id -->
+            <!--selected para hacer que ese elemento del combo este seleccionado -->
+            <!--optgroup para agrupar opciones dentro de un select-->
+        </select>
+        <br>
+        <input type="submit" value="Enviar ">
+        <br>
+        <a href="index.html">Volver</a>
+        
+    </form>
+    <!--form:get la informacion se ve en el url (generalmente se ve dsp de un '?')-->
+    <!--form:post la info llega al servidor pero es invisible al usuario-->
+</body>
+</html>
